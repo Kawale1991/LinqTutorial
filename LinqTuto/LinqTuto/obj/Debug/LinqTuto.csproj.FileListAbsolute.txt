@@ -1,0 +1,7 @@
+D:\Linq Tutorial\LinqTuto\LinqTuto\bin\Debug\LinqTuto.exe.config
+D:\Linq Tutorial\LinqTuto\LinqTuto\bin\Debug\LinqTuto.exe
+D:\Linq Tutorial\LinqTuto\LinqTuto\bin\Debug\LinqTuto.pdb
+D:\Linq Tutorial\LinqTuto\LinqTuto\obj\Debug\LinqTuto.csproj.AssemblyReference.cache
+D:\Linq Tutorial\LinqTuto\LinqTuto\obj\Debug\LinqTuto.csproj.CoreCompileInputs.cache
+D:\Linq Tutorial\LinqTuto\LinqTuto\obj\Debug\LinqTuto.exe
+D:\Linq Tutorial\LinqTuto\LinqTuto\obj\Debug\LinqTuto.pdb
