@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace LinqTuto
 {
-    public class Employee
+    public class Department
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+        public List<Techs> Prgramming { get; set; }
 
-        public List<string> Books { get; set; }   
-
+    }
+    public class Techs
+    {
+        public string Teachologies { get; set; }
     }
 }
