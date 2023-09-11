@@ -16,22 +16,24 @@ namespace LinqTuto
         // 4 => ThenByDescending
         // 5 => Reverse
         public static void Main(string[] args)
-        { 
+        {
             //Order by operator
 
-            var result = new List<int>() { 1,5,7,9,6};
+            var result = new List<int>() { 1, 5, 7, 9, 6 };
             var result1 = result.OrderBy(x => x).ToList();
 
-            foreach (var x in result1) { 
+            foreach (var x in result1)
+            {
                 Console.WriteLine("Method Using orderby operator the value is " + x);
             }
 
             var result2 = (from n in result
-                          orderby n
-                          select n).ToList();
+                           orderby n
+                           select n).ToList();
 
 
-            foreach (var x in result2) {
+            foreach (var x in result2)
+            {
                 Console.WriteLine("Query Using orderby operator the value is " + x);
             }
 
@@ -57,11 +59,11 @@ namespace LinqTuto
 
             //Reverse Operators for int***************************************************************
 
-            int[] da = new int[] { 1,2,3,4,5,6,7};
+            int[] da = new int[] { 1, 2, 3, 4, 5, 6, 7 };
 
             var das = da.Reverse().ToList();
 
-            foreach(var x in das)
+            foreach (var x in das)
             {
                 Console.WriteLine("the reverse " + x);
             }
@@ -76,20 +78,35 @@ namespace LinqTuto
 
             //Reverse Operators for string***************************************************************
 
-            List<string> list = new List<string>() { "shyam","bharati"};
+            List<string> list = new List<string>() { "shyam", "bharati" };
 
             // 2 ways are there
             var list2 = list.AsEnumerable().Reverse();
             //list.Reverse();
 
-            foreach(var x in list2)
+            foreach (var x in list2)
             {
                 Console.WriteLine("the value of string using reverse operator method is " + x);
             }
 
 
+            // ThenBy Operator
+
+            List<Person> lsperson = new List<Person>() {
+                new Person(){FirstName = "Shyam", LastName ="Kawale" },
+                new Person(){FirstName="Bharati",LastName="Kawale" }
+            };
+
+            var lsperson2 = lsperson.OrderBy(x=> x.LastName).ThenBy(x=> x.FirstName).ToList();
+
+
+            foreach (var x in lsperson2)
+            {
+                Console.WriteLine($"{x.FirstName}{x.LastName}");
+            }
+
             Console.ReadLine();
-        
+
         }
     }
 }
